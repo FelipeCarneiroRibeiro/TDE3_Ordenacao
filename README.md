@@ -71,22 +71,3 @@ Menos Interações (Comparações)
 | 6º | Selection Sort (190) | (Vazio) | Gnome Sort (380) |
 
 ---
-
-## Análise e Conclusão: Quem é o Melhor?
-
-A resposta depende da situação:
-
-* **🏆 Melhor em Velocidade (Menos Comparações): `Bucket Sort`**
-    Se os dados puderem ser distribuídos (como nestes exemplos), o Bucket Sort é o vencedor absoluto em eficiência de processamento, ganhando em todos os cenários (ou quase ganhando no caso ordenado).
-
-* **🏆 Melhor para Dados "Caros" (Menos Trocas): `Selection Sort`**
-    Se mover um elemento fosse uma operação muito custosa (ex: arquivos grandes), o Selection Sort é o rei. Ele faz o número *mínimo* absoluto de trocas (O(n)) em todos os cenários.
-
-* **🏆 Melhor para "Quase Ordenados" (Vetor 2): `Bubble Sort (Flag)`, `Cocktail Sort` e `Gnome Sort`**
-    Estes três algoritmos brilham em vetores já ordenados. Eles realizam apenas uma passagem (O(n)), percebem que nada mudou e param, tornando-os os mais rápidos para esta tarefa específica.
-
-* **🏆 Melhor "Anti-Pior Caso" (Vetor 3): `Comb Sort`**
-    No pior cenário (vetor invertido), onde Bubble, Cocktail e Gnome entram em colapso O(n²), o Comb Sort se destaca. Seu "gap" permite que ele resolva o vetor invertido com muito menos comparações e trocas que seus pares.
-
-* **🏆 O Algoritmo "Equilibrado": `Comb Sort`**
-    Excluindo o Bucket Sort (que é de outra categoria), o Comb Sort se mostra o melhor algoritmo de comparação e troca de propósito geral: ele é o 2º melhor no caso aleatório e o 2º melhor no caso invertido, evitando os colapsos de desempenho dos outros algoritmos O(n²).
